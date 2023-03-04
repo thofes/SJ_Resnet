@@ -8,7 +8,8 @@ def load_data(train_dir, val_dir, image_size=(270,480), batch_size=50):
         validation_split = 0.2,
         seed=123,
         image_size=image_size,
-        batch_size=batch_size
+        batch_size=batch_size,
+        shuffle=True
     )
 
     val_ds = tf.keras.preprocessing.image_dataset_from_directory(
@@ -17,7 +18,8 @@ def load_data(train_dir, val_dir, image_size=(270,480), batch_size=50):
         validation_split = 0.2,
         seed=123,
         image_size=image_size,
-        batch_size=batch_size
+        batch_size=batch_size,
+        shuffle=True
     )
 
     class_names = train_ds.class_names
